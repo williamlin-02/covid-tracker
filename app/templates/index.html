@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COV-19 in the World</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="m-3">
+    <div>
+        <h2 class="text-center">COV-19 in the World</h2>
+        <p class="text-center">Updated {{ updated }} </p>
+        <div class='text-center'>
+            <svg id='worldmap' width='800' height='450'></svg>
+        </div>
+
+        <div class='container' style='max-width: 800px'>
+            <table class='table table-striped' id='countrytable'>
+                <tr>
+                    <th id='countryname' colspan='2'></th>
+                </tr>
+                <tr>
+                    <td>New Confirmed Cases:</td>
+                    <td style='color: red;'></td>
+                </tr>
+                <tr>
+                    <td>Total Confirmed Cases:</td>
+                    <td style='color: red;'></td>
+                </tr>
+                <tr>
+                    <td>New Deaths:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total Deaths:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>New Recovered:</td>
+                    <td style='color: #6698FF;'></td>
+                </tr>
+                <tr>
+                    <td>Total Recovered:</td>
+                    <td style='color: #6698FF;'></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class='text-center'>
+        Website by Calvin Chu, Jeff Lin, William Lin, Kevin Cai<br>
+        <a href='https://api.covid19api.com/summary'>Source</a>
+    </footer>
+
+</body>
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="tooltip.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var info = {{ data|safe }};
+</script>
+<script type=text/javascript src="{{
+    url_for('static', filename='script.js') }}"></script>
+</html>

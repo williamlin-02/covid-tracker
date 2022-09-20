@@ -1,0 +1,30 @@
+william -- 2020-05-10 21:36
+revised site map in design log
+
+linJef -- 2020-05-04
+connected reliant JS scripts to HTML and JSON data to Flask app
+added basic choropleth map from JS tutorials
+
+chuCal -- 2020-05-04 14:32
+set up json data transfer from python to js
+
+chuCal -- 2020-05-05 16:15
+got map color intensities to correspond to data from API
+
+chuCal -- 2020-05-09 20:48
+got tooltips to show up when hovering over a country displaying corresponding data
+
+williamL -- 2020-05-10 22:47
+added team flag and pdf for the covid-19 api
+
+linJef -- 2020-05-11 23:00
+added table for dispalying data under map
+modified map appearance and behavior
+
+chuCal -- 2020-05-11 00:09
+connected API data to html table that displays the country's data when hovering over it
+
+linJef -- 2020-05-11 04:14
+added data update time stamp and footer
+modified table appearance
+added error handling page for excessive API requests
